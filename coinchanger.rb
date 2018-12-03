@@ -1,6 +1,5 @@
 def coin_counter(coins)
     hash = Hash.new
-    if coins.class == Integer
         if coins >= 25 
             quarter = coins / 25
             hash.merge!(:quarters => quarter)
@@ -29,10 +28,6 @@ def coin_counter(coins)
             hash.merge!(:pennys => pennys)
             coins -= pennys * 1
         end
-    else 
-        p "Please use Integers only."
-        return "Please use Integers only."
-    end
 
     return hash
 end
